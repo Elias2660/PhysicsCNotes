@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{float} 
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage[letterpaper, total={7.5in, 10in}]{geometry}
+
+\makeindex
+
+\begin{document}
+\title{Electric Charge and Methods of Charging}
+\author{Questions, Textbook; Answers, Elias Xu}
+\date{January 28, 2025}
+\maketitle
+
+
+\section{}
+\emph{Consider a electrically neutral object. If this object is given a positive charge, does it mean mass increases, decrease, or stay the same? Explain.} \\
+Decreases, because a positive charge means a decrease in the number of electrons, which while they have a small mass, will nonetheless cause mass to decrase.
+
+\section{}
+\emph{Explain why a comb that has been rubbed through your hair attracts small bits of paper, even though the paper is uncharged?} \\
+Neutral objects, when exposed to a charged object, polarize, leading to them being attracted to the charged comb.
+
+\section{}
+\emph{A charged rod is brought near a suspended object, which is repelled by the rod. Can we conclude that the suspended object is charged?} \\
+Yes, because if it wasn't charged, the polarized object would attract to the charged rod.
+
+\section{}
+\emph{A container holds a gas consisting of 1.5 moles of oxygen molecules. One in a million of these molecules has lost a single electron. What is the next charge of the gas?} \\
+To solve, you have the calculate the number of charged particles, and then convert those elementary charges to columbs.
+$$\frac{1.5 \text {m} \times 6.023 \times 10 ^ 23 \frac{\text{particles}}{\text{mole}}}{1 \times 10 ^ 6 \frac{\text {particles}}{\text{charged particles} }} \times \frac{1.6 \times 10 ^ {-19} \text{C}}{e} = \boxed{ 0.144 C}$$
+The first part compute the number of charged particles, and the second part converts those charged particles into columbs. $6.023 \times 10 ^ 23 \frac{\text{particles}}{\text{mole}}$ is Avogadro's number.
+
+\section{}
+\emph{When adhesive tape is pulled from a dispenser, the detached tape acquired a positive charge and the remaining tape in the despenser aquires a negative charge. If the tape pulled from the dispenser has $0.14 \mu C$ of charge per centimeter, what length of tape must be pulled to transfer $1.8 \times 10 ^ 13$ electrons to the remaining tape? } \\
+You just have to divide the amount of charge needed by the rate, after converting the electrons to columbs.
+$$1.8 \times 10 ^ 13 \text{ electrons} \times 1.6 \times 10 ^ {-19} \frac{\text{C}}{\text{electrons}} = 2.88\times 10 ^ {-6} \text{C}$$
+$$\frac{2.88 \times 10 ^ {-6} \text{C}}{0.14 \times 10^{-6} \frac{\text{C}}{\text {cm}}} = \boxed{20.57 \text{cm}}$$
+
+\section{}
+\emph{A system of 1525 particles, each which is either a electron or a proton, has a net charge of $-5.456\times10^{-17} \text{C}$ \textbf{(a)} How many electrons are in this system? \textbf{(b)} What is the mass of this system?} \\
+To solve this problem, it's better to think about how many \textbf{more} electrons there are than protons, given the negative charge. To find that number, one does
+$$\frac{-5.456 \times 10^{-17} \text {C}}{-1.6 \times 10 ^ {-19} \frac{\text{C}}{\text{electron}}} = 341 \text{ electrons}$$
+And thus, the rest of the $1184$ particles are made up equally of electrons and protons, you get the answer $\boxed{933}$ for \textbf{(a)} \\~\\
+To solve for \textbf{(b)}, one just calculates the mass based on the predetermined number of protons and electrons.
+$$\text{mass } = 592 \text{ protons } \times 1.672 \times 10 ^ {-25} \text{kg } + 933 \text {electrons} \times 9.109 \ times 10 ^ {-31} \text {kg} = 9.906 \times 10 ^ {-25} \text {kg}$$
+\end{document}

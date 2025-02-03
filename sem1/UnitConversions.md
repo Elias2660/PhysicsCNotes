@@ -19,7 +19,7 @@ Note: use units that make sense.
 2. Why not precision?
     1. Imagine that you have a 33.4 cm ruler to measure a 33.4 cm object. According to sig figs, that would make the ruler have a length of 33.4 ± 33.4 cm. 
 
-![Graphing Position](Images/GraphingPosition.png)
+![Graphing Position](figures/GraphingPosition.png)
 
 **Average Velocity** 
 

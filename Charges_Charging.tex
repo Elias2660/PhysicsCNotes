@@ -21,7 +21,7 @@ These are my notes on charges and charging for Physics!
 
 \medskip
 
-Charges are fundamental properties for particles, just like \textbf{mass} and \textbf {spin}.
+Charges are fundamental properties for particles, just like \textbf{masses} and \textbf{spins}.
 
 \section{Fundamental Properties of Particles}
 
@@ -33,9 +33,9 @@ There are three particles that matter for charges and charging.
         \hline
         Particle & Charge (in \textit{e}) & Charge (in Coulombs (C))  \\
         \hline
-        Proton   & 1 \textit{e}           & $1.6 \times 10^{-19}$ C  \\
-        Electron & - 1 \textit{e}         & $-1.6 \times 10^{-19}$ C \\
-        Neutron  & 1 \textit{e}           & $1.6\times 10^{-19}$ C   \\
+        Proton   & 1\textit{e}           & $1.6 \times 10^{-19}$ C  \\
+        Electron & - 1\textit{e}         & $-1.6 \times 10^{-19}$ C \\
+        Neutron  & 1\textit{e}           & $1.6\times 10^{-19}$ C   \\
         \hline
     \end{tabular}
 \end{table}
@@ -133,5 +133,34 @@ Problems with this formula:
 Putting everything together, we have the new formula:
 $$\boxed{ \vec{F_e} = \frac{1}{4 \pi \epsilon} \frac{q_1 q_2}{R^2} \hat {r}}$$ \\
 where $\hat {r}$ is vector pointing to the other charge, making it so that when the equation positive, the resultant vector is pointed away from the other particle. Remember, $\boxed{\epsilon_0 = 8.85 \times 10 ^ {-12} \frac{\text{C}^2}{\text{Nm}^2}}$ [this is also on the reference table]
+
+\section{Electrical Fields}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.2\textwidth]{figures/physicsfields1.png}
+    \caption{Examples of a Electrical Field}
+\end{figure}
+The formula for calculating a electirc field, which is the force on the probe charge divided by the charge:
+$$\vec{E}(r) = \frac{\vec{F}_0(r, q_0)}{q_0} = \frac{\frac{1}{4\pi\epsilon_0} \frac{Qq_0}{r^2}}{q_0} = \boxed{\frac{1}{4\pi\epsilon_0} \frac{Q}{r^2}\hat{r} \frac{\text{N}}{\text{C}}}$$
+\textbf{NOTE}: Always assume that the satellite particle is positive. \\~\\
+
+\textbf{Example} \\
+The figure below shows a proton $p$ and an electron $e$ on an x-axis. What is the direction of field due to the electron at points S and R, and then the net charge. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{figures/ElectricFieldExampleProblem.png}
+\end{figure}
+\begin{itemize}
+    \item The electron's field on S is towards the electron in a rightward direction, and at R is towards the electron in a left direction
+    \item The net field at S is a lesser (lesser magnitude) arrow towards the right, and at R its a larger arrow (greater magnitude) to the left.
+\end{itemize}
+
+\subsection{Calculating the Electrical Charge of Non-Point Particles}
+If we have a long thin rod, we have a few methods to try to integrate and find the field:
+\begin{itemize}
+    \item You can integrate (\textbf{DRAWBACKS}: Both wierd directionally and changes with the charge too, not always ideal)
+    \item Chickening out and using a $\infty$ lengthed rod, or use \textbf{Gauss' Law} (ohhhhh...)
+\end{itemize}
+
 
 \end{document}

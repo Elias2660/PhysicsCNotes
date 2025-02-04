@@ -31,21 +31,21 @@ There are three particles that matter for charges and charging.
     \centering
     \begin{tabular}{|c|c|c|}
         \hline
-        Particle & Charge (in \textit{e}) & Charge (in Coulombs (C))  \\
+        Particle & Charge (in \textit{e}) & Charge (in Coulombs (C)) \\
         \hline
-        Proton   & 1\textit{e}           & $1.6 \times 10^{-19}$ C  \\
-        Electron & - 1\textit{e}         & $-1.6 \times 10^{-19}$ C \\
-        Neutron  & 1\textit{e}           & $1.6\times 10^{-19}$ C   \\
+        Proton   & 1\textit{e}            & $1.6 \times 10^{-19}$ C  \\
+        Electron & - 1\textit{e}          & $-1.6 \times 10^{-19}$ C \\
+        Neutron  & 1\textit{e}            & $1.6\times 10^{-19}$ C   \\
         \hline
     \end{tabular}
-\end{table}
+\end{table}b
 
 Charges are usually sent in multiples of elementary charge, usually through electrons (because if you remove protons, the atoms themselves change).
 
 \medskip
 \textbf{Note}: Elementary charges are elementary because they are the smallest stable charge. You can get quarks (with fractions of elementary charges), but will reform to these particles.
 
-\section{Sending and Recieving Charge}
+\section{Sending and Receiving Charge}
 
 There are three methods for sending and recieving charge:
 
@@ -142,10 +142,11 @@ where $\hat {r}$ is vector pointing to the other charge, making it so that when 
 \end{figure}
 The formula for calculating a electirc field, which is the force on the probe charge divided by the charge:
 $$\vec{E}(r) = \frac{\vec{F}_0(r, q_0)}{q_0} = \frac{\frac{1}{4\pi\epsilon_0} \frac{Qq_0}{r^2}}{q_0} = \boxed{\frac{1}{4\pi\epsilon_0} \frac{Q}{r^2}\hat{r} \frac{\text{N}}{\text{C}}}$$
+
 \textbf{NOTE}: Always assume that the satellite particle is positive. \\~\\
 
 \textbf{Example} \\
-The figure below shows a proton $p$ and an electron $e$ on an x-axis. What is the direction of field due to the electron at points S and R, and then the net charge. 
+The figure below shows a proton $p$ and an electron $e$ on an x-axis. What is the direction of field due to the electron at points S and R, and then the net charge.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\textwidth]{figures/ElectricFieldExampleProblem.png}
@@ -160,6 +161,68 @@ If we have a long thin rod, we have a few methods to try to integrate and find t
 \begin{itemize}
     \item You can integrate (\textbf{DRAWBACKS}: Both wierd directionally and changes with the charge too, not always ideal)
     \item Chickening out and using a $\infty$ lengthed rod, or use \textbf{Gauss' Law} (ohhhhh...)
+\end{itemize}
+
+\section{Calculating Continious Charge Distributions}
+Reminder: It's arbitrarily difficult to calculate the charge of a continious shape. Therefore in order to solve these problems, one has to simplify stuff. \\
+\textbf{Simplification 1}: The field exerted in point R by a charged ring.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/TheRing1.png}
+    \caption{the Ring in question}
+\end{figure}
+Simplications (it's a continious distance, but):
+\begin{itemize}
+    \item Symmetry
+    \item Rigid Structure
+\end{itemize}
+
+\subsection{Deriving the Formula for Calculating the Electrical field}
+Let's divide this method into several steps
+\begin{enumerate}
+    \item Define Charge Density
+    \item Use symmetry
+    \item Integration
+\end{enumerate}
+
+\textbf{\emph{Step 1}: Defining Charge Density}\\
+Let's create a new value, and let's define it as charge density, $\lambda$, to help make this easier.
+
+$$\lambda = \frac{\delta q}{\delta l} $$
+Also, from the special case of it being a ring, we know that charge density is also the total charge minus the radius of the ring:
+$$\text{Charge Density} = \frac{Q}{2 \pi r}$$
+Then, we know that:
+$$\lambda = \frac{\delta q}{\delta l} = \frac{Q}{2\pi r}$$
+$$\delta q = \lambda \delta l$$
+
+\textbf{\emph{Step 2}: Finding $\delta \vec{E}$ from $\delta q$ }\\
+Let's first start with integrating and then substituting for the change in charge.
+$$\delta \vec{E} = \frac{1}{4 \pi \epsilon R^2} \delta Q = \frac{1}{4\pi\epsilon} \frac{\lambda\delta l}{z^2 + r^2}$$
+The visualization of the new figure:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/TheRing2.png}
+    \caption{the Ring in question}
+\end{figure}
+
+
+\textbf{\emph{Step 3}: Use Symmetry}\\
+\emph{Common sense time}: if you have two little $\delta \vec{F}$ from two little $\delta q$ from two $\delta l$ which are on opposite sides of circle, they cancel out. This is where we get $\delta \vec{E}_{\text{VERT}}$. After we integrate that, we should do some substituting
+$$\delta E_{\text{VERT}} = \big| \delta \vec{E} \big| \cos \theta = \frac{1}{4\pi\epsilon} \frac{hdl}{(z^2 + d^2)} \cos \theta$$
+$$= \frac{1}{4\pi\epsilon} \frac{hdl}{(z^2 + d^2)} \times \frac{z}{r}  \left[\cos \theta = \frac{z}{R} \right]$$
+$$= \frac{1}{4 \pi \epsilon} \frac{\lambda \delta l}{(z^2 + R ^2)^{3/2}} z$$
+What's so great about this is that everything is constant, so integrating over the length of the ring would be trivial.
+
+
+\textbf{\emph{Step 4}: Integrate}
+$$\vec{E} = \int \delta E_{\text{VERT}} = \frac{1}{4 \pi\epsilon} \frac{\lambda z}{(z^2 + R^2)^{3/2}} \int_{0}^{2\pi R} \delta l$$
+$$= \frac{\frac{Q}{2\pi R } z}{4 \pi \epsilon (z^2 + R^2)} 2\pi R   \left[ \text{\textbf{NOTE}: } \lambda = \frac{Q}{2 \pi R} \right]$$
+$$= \boxed{\frac{Qz}{4\pi\epsilon(z^2 + R^2)^{3/2}}}$$
+
+\textbf{Some Test Cases}
+\begin{itemize}
+    \item $E_{z = 0} = 0$
+    \item $E_{z >> R} = \frac{Q}{4\pi\epsilon R^2}$ [basically the point formula, its very far away it behaves like a point particle]
 \end{itemize}
 
 

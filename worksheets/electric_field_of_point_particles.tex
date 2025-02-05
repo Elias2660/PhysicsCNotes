@@ -20,7 +20,9 @@
 \section*{4}
 \emph{Two charged particles are attached to an x axis: Particle 1 of charge $-2.00\times10^{-7} \text{C}$ is at position $6.00 \text{cm}$ and particle 2 of charge $2 \times10^{-7} \text{C}$ is at position $x = 21.0 \text{cm}$. Midway between the particles, what is their net electric field in unit-vector notation.}\\
 Given the fact that the particle in midway, the electical fields point in the same direction. The resulting calculation is simple:
-$$E_{net} = E_1(r) - E_2(r) = \frac{}{}$$
+$$d_{mid} = \frac{0.21 \text{m} + 0.06 \text{m}}{2} = 0.075 \text{m} $$
+$$E_{net} = E_1(r) - E_2(r) = \frac{1}{4\pi\epsilon_0} \frac{-2\times10^{-7} \text{C}}{(0.075 \text{m})^2} - \frac{1}{4 \pi\epsilon_0} \frac{2\times10^{-7}\text{C}}{(0.075 \text{m})^2}$$
+$$= \frac{1}{4\pi\epsilon_0 (0.075 \text{m})^2 } \left(- 2\times10^{-7} \text{C} - 2\times10^{-7} \text{C} \right) = \boxed{-6.392\times10^5 \frac{\text{N}}{\text{C}}}$$
 
 
 \section*{7}
@@ -29,6 +31,10 @@ $$E_{net} = E_1(r) - E_2(r) = \frac{}{}$$
     \centering
     \includegraphics[width=0.3\textwidth]{figures/Q7.png}
 \end{figure}
+To solve this problem, one has to split into x and y components: 
+$$D = \sqrt{(0.025\text{m})^2 + (0.025\text{m})^2}$$
+$$E_x = \frac{1}{4 \pi\epsilon_0 D^2} \cos 45 \left(10 \text{nC} - 20 \text{nC} + 20 \text{nC} - 10 \text{nC} \right) = 0$$
+$$E_y = \frac{1}{4 \pi\epsilon_0 D^2} \sin 45 \left(-10\text{nC} + 20 \text{nC} + 20 \text{nC} - 10 \text{nC}\right) = \frac{1}{4\pi\epsilon_0 D^2} \sin(45) 20 \times 10 ^{-9} C = \boxed{101730.65 \frac{\text{N}}{\text{C}}}$$
 
 
 \end{document}

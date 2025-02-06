@@ -163,14 +163,14 @@ If we have a long thin rod, we have a few methods to try to integrate and find t
     \item Chickening out and using a $\infty$ lengthed rod, or use \textbf{Gauss' Law} (ohhhhh...)
 \end{itemize}
 
-\section{Calculating Continious Charge Distributions}
+\section{Calculating Continuous Charge Distributions for a Ring}
 Reminder: It's arbitrarily difficult to calculate the charge of a continious shape. Therefore in order to solve these problems, one has to simplify stuff. \\
 \textbf{Simplification 1}: The field exerted in point R by a charged ring.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.3\textwidth]{figures/TheRing1.png}
     \caption{the Ring in question}
-\end{figure}
+\end{figure} 
 Simplifications (it's a continious distance, but):
 \begin{itemize}
     \item Symmetry
@@ -225,5 +225,27 @@ $$= \boxed{\frac{Qz}{4\pi\epsilon(z^2 + R^2)^{3/2}}}$$
     \item $E_{z >> R} = \frac{Q}{4\pi\epsilon R^2}$ [basically the point formula, its very far away it behaves like a point particle]
 \end{itemize}
 
+\section{Calculating Continuous Charge Distributions for a Charged Circular Rod}
+
+To solve this problem, let's do a few things:
+
+\begin{itemize}
+    \item Define Linear Charge Density, $\lambda$
+    \item Pick infintesimal charge element and define the infintesimal field from the infintesimal charge
+    \item Use Symmetry to determine the component that wouldn't cancel
+    \item Change variables as needed and integrate to find the field
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/ChargedCircularRod.png}
+\end{figure}
+
+\textbf{\emph{Step 1}: Defining Linear Charge Density}\\
+Let's try to find $\lambda$ and its relations to angle
+$$\lambda= \frac{\delta Q}{\delta L} = \frac{Q}{2\pi r \frac{\phi}{2\pi}} = \frac{Q}{\phi R}$$
+$$\delta Q = \lambda \delta l$$
+$$\delta L = R \delta \theta$$
+$$\delta Q = R \lambda \delta Q$$
 
 \end{document}

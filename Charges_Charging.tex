@@ -170,7 +170,7 @@ Reminder: It's arbitrarily difficult to calculate the charge of a continious sha
     \centering
     \includegraphics[width=0.3\textwidth]{figures/TheRing1.png}
     \caption{the Ring in question}
-\end{figure} 
+\end{figure}
 Simplifications (it's a continious distance, but):
 \begin{itemize}
     \item Symmetry
@@ -247,5 +247,18 @@ $$\lambda= \frac{\delta Q}{\delta L} = \frac{Q}{2\pi r \frac{\phi}{2\pi}} = \fra
 $$\delta Q = \lambda \delta l$$
 $$\delta L = R \delta \theta$$
 $$\delta Q = R \lambda \delta Q$$
+
+\textbf{\emph{Step 2}: Defining the Infintesimal Field from the Infintesimal Charge}
+$$\delta \vec{E} = \frac{1}{4 \pi\epsilon R^2} \delta Q = \frac{1}{4\pi\epsilon} \frac{Q}{\phi R} \delta l$$
+
+\textbf{\emph{Step 3}: Use Symmetry to Uncancelable Component}
+
+$$\delta \vec{E}_{\text{NC}}  = \delta \vec{E} \cos(\theta) = \frac{1}{4\pi\epsilon}\frac{Q}{\phi R} \cos(\theta) \delta l $$
+
+\textbf{\emph{Step 4}: Change Variables and Integrate}
+
+$$\delta \vec{E}_{\text{NC}} = \frac{1}{4\pi\epsilon R^2} \frac{Q}{\phi R} \cos(\theta) \delta l = 1\frac{1}{4\pi\epsilon R^2} \cos(\theta) \frac{Q}{\phi R} R \delta \theta$$
+$$\vec{E} = 2 \int_{0}^{\frac{\phi}{2}} \frac{1}{4\pi\epsilon R^2} \frac{Q}{\phi R} R \cos(\theta) \delta \theta$$
+$$= \boxed{\frac{Q}{4\pi\epsilon R^2 \phi} 2 \sin\left(\frac{\phi}{2}\right)}$$
 
 \end{document}

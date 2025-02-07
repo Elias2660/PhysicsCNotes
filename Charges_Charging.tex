@@ -261,4 +261,35 @@ $$\delta \vec{E}_{\text{NC}} = \frac{1}{4\pi\epsilon R^2} \frac{Q}{\phi R} \cos(
 $$\vec{E} = 2 \int_{0}^{\frac{\phi}{2}} \frac{1}{4\pi\epsilon R^2} \frac{Q}{\phi R} R \cos(\theta) \delta \theta$$
 $$= \boxed{\frac{Q}{4\pi\epsilon R^2 \phi} 2 \sin\left(\frac{\phi}{2}\right)}$$
 
+\section{Find the Electircal Field of a Disk}
+Find the electrical field of a point a distance z above a uniformly charged disk of radius R, with area A.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/DiskCharged.png}
+\end{figure}
+
+\textbf{\emph{Step 1}: Find charge density}\\
+$\sigma$ is the charge density
+
+$$\sigma = \frac{\delta q}{\delta A} = \frac{Q}{\pi R^2}$$
+$$\delta q = \sigma \delta A$$
+
+Let's now split the disk into rings of radius $r (0 < r < R)$, thickness $\delta r$ and charge $\delta q = \sigma \delta A$
+$$\delta A = 2 \pi r \delta r$$
+$$\delta q = \sigma \delta A = 2 \pi r \sigma \delta r$$
+
+\textbf{\emph{Step 2}: Finding an infintesimal field from infintesimal charge}
+
+$$\delta \vec{E} = \frac{z \delta q}{4 \pi \epsilon (z^2 + r^2) ^{\frac{3}{2}}} = \frac{z \sigma }{4 \epsilon} \frac{2r\delta r}{(z^2 + r^2) ^ {\frac{3}{2}}}$$
+
+\textbf{\emph{Step 3}: Integrate}
+$$\text{Let } u = z^2 + r^2; \delta u = 2r\delta r$$
+$$\vec{E} = \frac{z \sigma}{ 4 \epsilon} \int_{0}^{R} \frac{zr}{(z^2 + r^2)^{\frac{3}{2}}} \delta r$$
+$$= \frac{z \sigma}{4 \epsilon} \int_{z^2}^{z^2 + r^2} u ^{-\frac{3}{2}} \delta u = -\frac{z \sigma}{4 \epsilon} \left|u^{-\frac{1}{2}}\right|_{z^2}^{z^2 + r^2}$$
+$$= - \frac{z \sigma}{4 \epsilon}\left[\frac{1}{\sqrt{z^2 + k^2}}- \frac{1}{z}\right] = \frac{z \sigma}{4 \epsilon}\left[\frac{1}{z} - \frac{1}{\sqrt{z^2 + k^2}}\right]$$
+$$= \frac{\sigma}{2 \epsilon} \left[1 - \frac{z}{\sqrt{z^2 + r^2}}\right] = \boxed{\frac{Q}{2 \pi R^2  \epsilon} \left[1 - \frac{z}{\sqrt{z^2 + r^2}}\right]}$$
+
+\textbf{Some Checks}
+
 \end{document}

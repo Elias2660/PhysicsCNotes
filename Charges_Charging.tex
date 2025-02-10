@@ -208,9 +208,9 @@ The visualization of the new figure:
 
 \textbf{\emph{Step 3}: Use Symmetry}\\
 \emph{Common sense time}: if you have two little $\delta \vec{F}$ from two little $\delta q$ from two $\delta l$ which are on opposite sides of circle, they cancel out. This is where we get $\delta \vec{E}_{\text{VERT}}$. After we integrate that, we should do some substituting
-$$\delta E_{\text{VERT}} = \big| \delta \vec{E} \big| \cos \theta = \frac{1}{4\pi\epsilon} \frac{hdl}{(z^2 + d^2)} \cos \theta$$
-$$= \frac{1}{4\pi\epsilon} \frac{hdl}{(z^2 + d^2)} \times \frac{z}{r}  \left[\cos \theta = \frac{z}{R} \right]$$
-$$= \frac{1}{4 \pi \epsilon} \frac{\lambda \delta l}{(z^2 + R ^2)^{3/2}} z$$
+$$\delta E_{\text{VERT}} = \big| \delta \vec{E} \big| \cos \theta = \frac{1}{4\pi\epsilon} \frac{\lambda \delta l}{(z^2 + R^2)} \cos \theta$$
+$$= \frac{1}{4\pi\epsilon} \frac{\lambda \delta l}{(z^2 + R^2)} \times \frac{z}{r}  \left[\cos(\theta) = \frac{z}{r} \right]$$
+$$= \frac{1}{4 \pi \epsilon} \frac{\lambda \delta l}{(z^2 + R^2)^{3/2}} z$$
 What's so great about this is that everything is constant, so integrating over the length of the ring would be trivial.
 
 
@@ -222,7 +222,7 @@ $$= \boxed{\frac{Qz}{4\pi\epsilon(z^2 + R^2)^{3/2}}}$$
 \textbf{Some Test Cases}
 \begin{itemize}
     \item $E_{z = 0} = 0$
-    \item $E_{z >> R} = \frac{Q}{4\pi\epsilon R^2}$ [basically the point formula, its very far away it behaves like a point particle]
+    \item $E_{z >> r} = \frac{Q}{4\pi\epsilon z^2}$ [basically the point formula, its very far away it behaves like a point particle]
 \end{itemize}
 
 \section{Calculating Continuous Charge Distributions for a Charged Circular Rod}

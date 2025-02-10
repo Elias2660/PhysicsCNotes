@@ -38,7 +38,7 @@ There are three particles that matter for charges and charging.
         Neutron  & 1\textit{e}            & $1.6\times 10^{-19}$ C   \\
         \hline
     \end{tabular}
-\end{table}b
+\end{table}
 
 Charges are usually sent in multiples of elementary charge, usually through electrons (because if you remove protons, the atoms themselves change).
 
@@ -239,6 +239,7 @@ To solve this problem, let's do a few things:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{figures/ChargedCircularRod.png}
+    \caption{Example of a charged circular rod}
 \end{figure}
 
 \textbf{\emph{Step 1}: Defining Linear Charge Density}\\
@@ -261,12 +262,13 @@ $$\delta \vec{E}_{\text{NC}} = \frac{1}{4\pi\epsilon R^2} \frac{Q}{\phi R} \cos(
 $$\vec{E} = 2 \int_{0}^{\frac{\phi}{2}} \frac{1}{4\pi\epsilon R^2} \frac{Q}{\phi R} R \cos(\theta) \delta \theta$$
 $$= \boxed{\frac{Q}{4\pi\epsilon R^2 \phi} 2 \sin\left(\frac{\phi}{2}\right)}$$
 
-\section{Find the Electircal Field of a Disk}
+\section{Find the Electrical Field of a Disk}
 Find the electrical field of a point a distance z above a uniformly charged disk of radius R, with area A.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.5\textwidth]{figures/DiskCharged.png}
+    \caption{Example of a charged disk}
 \end{figure}
 
 \textbf{\emph{Step 1}: Find charge density}\\
@@ -290,6 +292,112 @@ $$= \frac{z \sigma}{4 \epsilon} \int_{z^2}^{z^2 + r^2} u ^{-\frac{3}{2}} \delta 
 $$= - \frac{z \sigma}{4 \epsilon}\left[\frac{1}{\sqrt{z^2 + k^2}}- \frac{1}{z}\right] = \frac{z \sigma}{4 \epsilon}\left[\frac{1}{z} - \frac{1}{\sqrt{z^2 + k^2}}\right]$$
 $$= \frac{\sigma}{2 \epsilon} \left[1 - \frac{z}{\sqrt{z^2 + r^2}}\right] = \boxed{\frac{Q}{2 \pi R^2  \epsilon} \left[1 - \frac{z}{\sqrt{z^2 + r^2}}\right]}$$
 
-\textbf{Some Checks}
+\textbf{Some Checks} \
+Just some limits tomfoolery
+
+$$E\left(^{z \to\infty}_{R\to\infty}\right) = \frac{\sigma}{2 \epsilon}$$
+
+
+\section{Constant Electric Field}
+Constant electric fields are just that. They're constant, and they apply to particles in interesting ways, very similar to gravity.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/ConstantElectricFieldIntro.png}
+    \caption{Example of a constant electric field }
+\end{figure}
+
+You get parabolic stuff too, if apply an initial velocity.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/ConstantFieldsWithInitialVs.png}
+    \caption{Example of a constant electric field with an initial velocity}
+\end{figure}
+
+\section{Electrical Potentials}
+Electric potentials are measures of the potential energy created by an electric field.
+You can think of them as such:
+
+\begin{center}
+    Potential: Potential Energy :: Field: Force Energy
+\end{center}
+For the potential energy of point charges, there is a very big positional element here. As long as you have two charged particles, as long as they want to move somewhere, there will always be potential energy in that system. Usually, systems want to reduce that energy to zero.
+
+\subsection{Formulas and Dimensional Analysis}
+Let's look at the formulas for volts and field, and see what we can make for them. Let's have the formula for volts, and put of the formula for electric field for comparison.
+
+\begin{align*}
+    V = \frac{U}{q} &  & \vec{E} =  \frac{\vec{F}}{q}
+\end{align*}
+
+Let's do a quick dimensional analysis too for these \emph{volts}:
+
+$$[V] = \frac{[J]}{[C]}$$
+
+Differences between field and potential:
+
+\begin{itemize}
+    \item Field is a vector quantity, voltage is a scalar quantity
+    \item Field lines are always perpendicular accross vector lines
+\end{itemize}
+
+Let's have a visualization changes of potential over time:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/ChangeVAccrossNumberLine.png}
+    \caption{The change of charge accross a number line}
+\end{figure}
+
+Notes:
+\begin{itemize}
+    \item Voltage decreases as one goes through a field lines
+\end{itemize}
+
+\subsection{Equipotentials}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/FieldvsPotentials.png}
+    \caption{Example of electric fields vs electric potentials}
+\end{figure}
+
+\begin{itemize}
+    \item Lines accross these show the areas of equidistant potentials
+    \item Circular around point charge
+    \item \emph{Perpendicular to field lines}, (e.g. Electric field is the negative gradient of potential), or $E = - \Delta V$
+\end{itemize}
+
+\subsection{Calculating Electrical Potential from Electric Field}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/PotentialChanges.png}
+    \caption{Visualization of the different differentials here}
+\end{figure}
+
+To try to find a formula for this, starting from the givens and working up.
+
+\begin{align*}
+    \vec{F} = q_0 \vec{E} &  & W = \int \delta W
+\end{align*}
+
+$$W = \int \delta w =  \int_{i}^{f} \vec{F} \delta \vec{s}$$
+$$ = - \Delta U = - q_0 \Delta V $$
+$$ \Delta v = \boxed{-\int_{i}^{f} \vec{E} \delta s}$$
+
+Given that electric field is a vector, and potentials are scalars, one might have to treat these as partial derivatives of x and y. So we have the original equation:
+
+$$\vec{E} = \frac{Q}{4 \pi \epsilon R^2} = - \frac{\delta V}{\delta s}$$
+
+But we have to split it into components:
+
+\begin{align*}
+    E_x = \frac{\delta V}{\delta x} &  & E_y = \frac{\delta V}{ \delta y} \\
+\end{align*}
+
+$$  \vec{E} = - \frac{\Delta V}{\Delta S} = \frac{\delta V}{\delta x} + \frac{\delta V}{\delta y}$$
+
+
 
 \end{document}
+

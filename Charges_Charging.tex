@@ -233,7 +233,7 @@ To solve this problem, let's do a few things:
 
 \begin{itemize}
     \item Define Linear Charge Density, $\lambda$
-    \item Pick infintesimal charge element and define the infintesimal field from the infintesimal charge
+    \item Pick infinitesimal charge element and define the infinitesimal field from the infinitesimal charge
     \item Use Symmetry to determine the component that wouldn't cancel
     \item Change variables as needed and integrate to find the field
 \end{itemize}
@@ -279,13 +279,13 @@ $\sigma$ is the charge density
 $$\sigma = \frac{\delta q}{\delta A} = \frac{Q}{\pi R^2}$$
 $$\delta q = \sigma \delta A$$
 
-Let's now split the disk into rings of radius $r (0 < r < R)$, thickness $\delta r$ and charge $\delta q = \sigma \delta A$
+Let's now split the disk into rings of radius $r \in (0 < r < R)$, thickness $\delta r$ and charge $\delta q = \sigma \delta A$
 $$\delta A = 2 \pi r \delta r$$
 $$\delta q = \sigma \delta A = 2 \pi r \sigma \delta r$$
 
-\textbf{\emph{Step 2}: Finding an infintesimal field from infintesimal charge}
+\textbf{\emph{Step 2}: Finding an infinitesimal field from infinitesimal charge}
 
-$$\delta \vec{E} = \frac{z \delta q}{4 \pi \epsilon (z^2 + r^2) ^{\frac{3}{2}}} = \frac{z \sigma }{4 \epsilon} \frac{2r\delta r}{(z^2 + r^2) ^ {\frac{3}{2}}}$$
+$$\delta \vec{E} = \frac{z \delta q}{4 \pi \epsilon (z^2 + r^2) ^{\frac{3}{2}}} = \frac{z \sigma}{4 \pi \epsilon} \frac{2r \pi \delta r}{(z^2 + r^2) ^ {\frac{3}{2}}}=  \frac{z \sigma }{4 \epsilon} \frac{2r\delta r}{(z^2 + r^2) ^ {\frac{3}{2}}}$$
 
 \textbf{\emph{Step 3}: Integrate}
 $$\text{Let } u = z^2 + r^2; \delta u = 2r\delta r$$
@@ -385,7 +385,7 @@ To try to find a formula for this, starting from the givens and working up.
 
 $$W = \int \delta w =  \int_{i}^{f} \vec{F} \delta \vec{s}$$
 $$ = - \Delta U = - q_0 \Delta V $$
-$$ \Delta v = \boxed{-\int_{i}^{f} \vec{E} \delta s}$$
+$$ \Delta v = \boxed{-\int_{i}^{f} \vec{E} \cdot \delta \vec{s}}$$
 
 Given that electric field is a vector, and potentials are scalars, one might have to treat these as partial derivatives of x and y. So we have the original equation:
 

@@ -1,4 +1,6 @@
 \documentclass{article}
+\usepackage{gensymb}
+\usepackage{textcomp}
 \usepackage{amsmath}
 \usepackage{hyperref}
 \usepackage{bookmark}
@@ -127,7 +129,52 @@ $$\boxed{V_r = \frac{Q}{4\pi\epsilon r}}$$
 
 Note that the property is \emph{scalar}. This makes stuff like addition and subtraction better!
 
+\section{Electric Flux}
+A measure of how many field lines pierces a certain surface / goes through a surface
 
+\subsection{Finding formula for Electric Flux}
+Flux is porportional to 
+\begin{itemize}
+    \item Cross sectional area of the surface [A]
+    \item Strengh of the wires [E]
+    \item orientation of the wires [$\theta$]
+\end{itemize}
 
+Max flux occurs when $\theta = 0 \degree$ (the angle between the normal of the surface and the field lines), and mix flux occurs when $\theta = 90 \degree$ (e.g. when normal of the surface and the field lines are perpendicular).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{figures/fluxamples.png}
+    \caption{Visualization of max and min flux}
+\end{figure}
+
+Thus, you can compute the flux here:
+
+$$\Phi = \vec{E} \cdot  \vec{A} = |\vec{E}||\vec{A}|\cos \theta $$
+
+This is with the assumption that that
+\begin{itemize}
+    \item Plane is regular
+    \item Field is constant
+\end{itemize}
+
+For an irregular plane / field, you can use this formula 
+
+$$\Phi = \int \vec{E} \cdot \delta \vec{A}$$
+
+\subsection{Closed Areas vs. Open Areas}
+
+Gaussian Surfaces are closed figures, and that allows you to find a direction for the area vector, which is always outwards. Some additional points about close areas and flux:
+
+\begin{itemize}
+    \item The flux for an object that is hit by continious equipotentials and doesn't contain any of their own is zero
+    \item For example, if you have flux that goes through a box, the flux is zero
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/ExampleofEquipotentials.png}
+    \caption{Object with zero flux}
+\end{figure}
 
 \end{document}

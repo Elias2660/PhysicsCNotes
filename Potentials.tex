@@ -190,7 +190,7 @@ This can also be related to potentials, through the calc idea of differentiation
 
 $$\Delta \cdot E = \frac{\rho}{\epsilon_0}$$
 
-These equations, though, are only good/useful if you have a good guassian surface
+These equations, though, are only good/useful if you have a good gaussian surface
 
 \subsection{Nice Guassian Surfaces}
 
@@ -208,6 +208,38 @@ $$E = \frac{1}{4\pi\epsilon_0} \frac{Q}{r^2}$$
 \subsection{Electrical Fields vs Flux}
 
 Eletric fields and flux can vary, for but flux you can calculate a total since it's a scalar value
+
+
+\section{Charges on a Conductor}
+
+Any changes placed in an insulated conductor would go the edges of the condutor, none will remain.
+
+\subsection{Proof by Gauss' law}
+
+Let's solve with a copper (pretty good condutor) and inside it there's a gaussian surface.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.28\textwidth]{figures/GuassSetups.png}
+    \caption{Guassian setup}
+\end{figure}
+
+We have to prove that the field everywhere except the surface is zero, which means that $E_{\text{Gaussian surface}} = 0$, because then, through Gauss' theorem, the charge would then be zero. Let's prove that through negation:
+
+$$E \neq 0 \to \exists E \to \exists F_{\text{on any q}} \to \exists a_{\text{on any q}}$$
+
+An acceleration means that there definitely is no field. 
+
+\subsection{Charge inside a cavity}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.28\textwidth]{figures/GaussCavity.png}
+    \caption{Guassian setup}
+\end{figure}
+
+The implications of this is that if there was a charge inside a cavity, it would be balanced out by a charge along the wall of the conductor to make sure that the charge is zero. If the charge inside the sirface was $q$, then the charge on the edge would be  $-q$.
+
 
 
 \end{document}

@@ -77,7 +77,7 @@ Notes:
 \subsection{Calculating Electrical Potential from Electric Field}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.5\textwidth]{figures/PotentialChanges.png}
+    \includegraphics[width=0.4\textwidth]{figures/PotentialChanges.png}
     \caption{Visualization of the different differentials here}
 \end{figure}
 
@@ -133,7 +133,7 @@ Note that the property is \emph{scalar}. This makes stuff like addition and subt
 A measure of how many field lines pierces a certain surface / goes through a surface
 
 \subsection{Finding formula for Electric Flux}
-Flux is porportional to 
+Flux is porportional to
 \begin{itemize}
     \item Cross sectional area of the surface [A]
     \item Strengh of the wires [E]
@@ -158,7 +158,7 @@ This is with the assumption that that
     \item Field is constant
 \end{itemize}
 
-For an irregular plane / field, you can use this formula 
+For an irregular plane / field, you can use this formula
 
 $$\Phi = \int \vec{E} \cdot \delta \vec{A}$$
 
@@ -178,7 +178,7 @@ Gaussian Surfaces are closed figures, and that allows you to find a direction fo
 \end{figure}
 
 \section{Gauss's Law}
-Eletric flux gives us \textbf{Gauss' Law}, which tells us that the eletric flux through a closed surface is porportional to the enclosed charge. 
+Eletric flux gives us \textbf{Gauss' Law}, which tells us that the eletric flux through a closed surface is porportional to the enclosed charge.
 
 \subsection{Gauss' Theorem}
 
@@ -194,7 +194,7 @@ These equations, though, are only good/useful if you have a good gaussian surfac
 
 \subsection{Nice Gaussian Surfaces}
 
-An example is if it is symmetrical to a charged object. An example is a circular surface with a point charge in the center. 
+An example is if it is symmetrical to a charged object. An example is a circular surface with a point charge in the center.
 
 $$\Phi = \frac{q_{\text{enc}}}{\epsilon_0} = \int \vec{E} \cdot \delta \vec{A}$$
 $$ = E \int \delta A = \frac{Q}{\epsilon_0}$$
@@ -228,7 +228,7 @@ We have to prove that the field everywhere except the surface is zero, which mea
 
 $$E \neq 0 \to \exists E \to \exists F_{\text{on any q}} \to \exists a_{\text{on any q}}$$
 
-An acceleration means that there would be not at equilbrium, which is definitionally false. 
+An acceleration means that there would be not at equilbrium, which is definitionally false.
 
 \subsection{Charge inside a cavity}
 
@@ -240,6 +240,68 @@ An acceleration means that there would be not at equilbrium, which is definition
 
 The implications of this is that if there was a charge inside a cavity, it would be balanced out by a charge along the wall of the conductor to make sure that the charge is zero. If the charge inside the sirface was $q$, then the charge on the edge would be  $-q$.
 
+\section{Electric Fields Infininitly Long Charged Rod}
+
+It's really hard the original way, but we can use Gauss's theorem to find the charge. Let's start with a infinitely long charged rod with density $\lambda$:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/InfiniteLongChargedRod.png}
+    \caption{Infinitely long chrged rod with charged density $\lambda$, $z$ perpendicular distance to point $p$}
+\end{figure}
+
+Let's construct a Guassian cylinder (to mimic symmetry of the charged rod) with length $L$ and radius $z$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/GuassianSurfaceInfiniteRod.png}
+\end{figure}
+
+$$\Phi = \Phi_1 + \Phi_2 + \Phi_3 = \Phi_2 \text{ [surface 1 and 3 perpendicular to field]} = \frac{q_{\text{enc}}}{\epsilon_0} = \frac{\lambda L}{\epsilon_0}$$
+
+And for z, the flux is uniform, because of the perpendicularity.
+
+$$\Phi = \int \vec{E} \cdot \delta \vec{A} = EA = 2\pi 2 L E - \frac{\lambda L}{\epsilon_0}$$
+$$2\pi2E = \frac{\lambda}{\epsilon_0}$$
+$$\boxed{E = \frac{\lambda}{2 \pi \epsilon_0 z}}$$
+
+\section{Electic Fields inside a NONCONDUCTING cylinder}
+
+This is different, because the charge can be anywhere (with a charged condutor, the charge was on the edges by the theorem). Before we solve, let's assume radial symmetry so that bad stuff doesn't happen. Let's first create it and then add a guassian surface surrounding the point coaxially.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/NonconductingCylinder.png}
+    \caption{Nonducting surface with a guassian surface}
+\end{figure}
+
+The goal is to find E at point P.
+
+$$\Phi_{\text{GS}} = \frac{q_{\text{enc}}}{\epsilon_0}$$
+$$a = 2\pi rLE$$
+
+Since the charge can be anywhere, you have to find $q_{\text{enc}}$ by integrating.
+
+$$EA = 2 \pi r E = \frac{1}{\epsilon_0} \int \rho \delta V$$
+
+There's two options different cases here, one where $r <= R$, and one where $r > R$.
+
+\subsection{Find E \texorpdfstring{($r \leq R$)}{(r ≥ R)}}
+
+$$2 \pi r L E = \frac{1}{\epsilon_0} \int \rho \delta V = \pi r^2 L \frac{\rho}{\epsilon_0} $$
+$$E = \frac{\rho r}{2 \epsilon_0}$$
+
+\subsection{Find E \texorpdfstring{$(r > R)$}{(r > R)}}
+
+$$2 \pi r LE  = \frac{1}{\epsilon_0} \int \rho \delta V = \frac{\rho}{\epsilon_0} \pi R^2 L$$
+$$E = \frac{R^2 \rho}{\epsilon_0 2 r}$$
+
+In sum, we get this graph relating $E$ with $r$: 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/EvRforNonconductionshells.png}
+\end{figure}
 
 
 \end{document}

@@ -326,4 +326,28 @@ To find an object with spherical symmetry, you just have to find an object whose
 $$\Phi = \frac{q_{\text{enc}}}{\epsilon_0} = \frac{A \sigma}{\epsilon_0}= 2 EA$$
 $$E = \boxed{\frac{\sigma}{2\epsilon_0}}$$
 
+\section{Uniformly charged Infinitely Large Slabs with a width}
+
+\textbf{Let's illustrate this problem through example.} There is an infinitely charged slab with the length of 9.4 mm, with a uniform density of $\rho = 5.80 \frac{\text{fc}}{\text{m}^2}$. What is the field experienced at the distances a) $x = 0 \text{ mm}$, b) $x = 2 \text{ mm}$, c) $x = 4.7 \text{ mm}$, d) $x = 26 \text{ mm}$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figures/GaussianPillbox.png}
+\end{figure}
+
+
+To solve this problem, you have think of special guassian pillbox with width equal to 2x centered at the middle of the space, in order to calculate the amount of charge enclosed. 
+
+$$\Phi = \frac{q_{\text{enc}}}{\epsilon_0} = 2 E A = \frac{1}{\epsilon_0} \rho V = \frac{2 A x p}{\epsilon_0}$$
+$$E = \frac{2 A x p}{A \epsilon_0 2 A} = \frac{x \rho}{\epsilon_0}$$
+
+This then gives you the formula to plug in: 
+
+\begin{itemize}
+    \item a) $0$
+    \item b) $1.3 \times 10 ^ {-6} \frac{\text{N}}{\text{C}}$
+    \item c) $3.08 \times 10^{-6} \frac{\text{N}}{\text{C}}$
+    \item d) $3.08 \times 10 ^{-6} \frac{\text{N}}{\text{C}}$ (You don't gather any additional charge from the stuff outside the slab so the field doesn't change.)
+\end{itemize}
+
 \end{document}

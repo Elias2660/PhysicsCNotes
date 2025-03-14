@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{gensymb}
+\usepackage{textcomp}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{bookmark}
+\usepackage{float} 
+\usepackage{graphicx}
+\usepackage{makeidx}
+\usepackage[letterpaper, total={7.5in, 10in}]{geometry}
+
+\makeindex
+\begin{document}
+\title{Circuits (Capacitance and Resistance)}
+\author{Elias Xu}
+\date{\today}
+\maketitle
+\setlength{\parindent}{0pt}
+
+\tableofcontents
+
+
+\section{Introduction}
+\textbf{Basic Text List:}
+\begin{itemize}
+    \item \textbf{Generator}: Motors, anything that can create a potential Differences
+    \item \textbf{Resistors}: Convert electrical energy to heat
+    \item \textbf{Capacitors}: Store charge
+\end{itemize}
+
+\section{Important Notice about Batteries}
+
+\begin{itemize}
+    \item Batteries do NOT supply charges (electrons come from capacitors / wires).
+    \item Battery = \emph{charge pump} = source of energy
+\end{itemize}
+
+\section{Capacitors (plate capacitors)}
+
+Capacitors have the ability to store charge over a potential difference. Capacitance is calculated as follows:
+
+$$C = \frac{\text{q}}{\text{V}}$$
+
+Where $q$ is the charge that the conductor has and the $V$ is the potential difference across the capacitor. Capacitance also comes with a new unit, the \textbf{Farad}:
+
+$$ \frac{[C]}{[V]} = \frac{[J]}{[C]} = [F]$$
+
+\subsection{Calculating For Capacitance}
+
+Capacitance depends on the following:
+
+\begin{itemize}
+    \item Geometry of the plates
+    \item Medium between plates (usually we're going to use air, though, we can also use other mediums)
+\end{itemize}
+
+To solve, follow the following steps
+
+\begin{enumerate}
+    \item Find the electric field between plates
+    \item Find the $\Delta V$ from the field
+    \item Apply that to the capacitance equation $C = \frac{q}{V}$
+\end{enumerate}
+
+\subsection{Calculating the Capacitance between Parallel Plates}
+
+\subsubsection{Finding the Electrical Field between two plates}
+
+With a area of $A$ and a distance between of $d$, with the medium between them air (shown by the $\epsilon_0$)
+
+$$\Phi = EA = \frac{q_{\text{enc}}}{\epsilon_0} = \frac{q}{A \epsilon_0}$$
+$$= \frac{\sigma}{\epsilon_0}$$
+
+\subsubsection{Finding voltage from field}
+
+$$\Delta V = - \int \vec{E} \delta \vec{s} = \int_{-\text{plate}}^{+\text{plate}} \vec{E} \delta \vec{s} = E \int \delta s = Ed$$
+
+We removed the negative sign because while the field is going from the positive plate to the negative plate, the direction vector is doing the opposite. We also double the field because of the two plates.
+
+\subsubsection{Solving for capacitance}
+
+$$C = \frac{q}{V} = \frac{q}{\frac{q}{A \epsilon_0}} \times d = \frac{A \epsilon_0}{d}$$
+
+\subsection{Calculating for the Capacitance between Cylindrical Capacitors}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figures/Cylindrical_Capacitors.png}
+    \caption{Examples of a Cylindrical Capacitor}
+\end{figure}
+
+\subsubsection{Find Electrical Field between Two of the Cylinders}
+
+$$\Phi = EA = \frac{q_{\text{enc}}}{\epsilon_0}$$
+$$A = 2 \pi r L$$
+$$E = \frac{q}{2 \pi \epsilon_0 r L}$$
+
+\subsubsection{Find Voltage from Field}
+
+$$\Delta v = - \int \vec{E} \delta \vec{s} = - \int_{b}^{a} \frac{q}{2 \pi r L \epsilon_0} \delta r = \int_{a}^{b} \frac{q}{\pi r L \epsilon_0} \delta r = \frac{q}{\pi L \epsilon_0} \ln \frac{b}{a}$$
+
+\subsubsection{Solving for the Equation}
+
+$$ C = \frac{q}{v} = \boxed{\frac{\pi L \epsilon_0}{\ln \frac{b}{a}}}$$
+
+\section{Capacitors in Parallel vs Circuits in Series}
+
+Always remember the formula $C = \frac{Q}{V}$
+
+\subsection{Capacitors in Parallel}
+
+If a capacitor is in parallel, you can think it as adding up metal plates. Voltages are the same, and charge is proportionate to the capacitance at the capacitor. For an example 3 capacitors in series, the,
+
+$$q_T = V_b \Sigma C $$
+$$q_T = q_1 + q_2 + q_3$$
+$$V_1 = V_2 = V_3 = V_B$$
+$$C_T = C_{\text{eq}} = \frac{q_T}{V_T} = \frac{q_1}{V_1} + \frac{q_2}{V_2}  + \frac{q_3}{V_3}$$
+$$C_{\text{eq}} = \Sigma C$$
+
+\textbf{Note}: This is opposite than resistors.
+
+\subsection{Capacitors in Series}
+
+If a capacitor is in series, you can think about it as adding up the air gaps. In the end, it's one big capacitor. Thus charge is equal.
+
+$$q_T = q_1 = q_2 = q_3$$
+$$V_T = V_1 + V_2 + V_3$$
+$$\frac{1}{C_{\text{eq}}} = \frac{V_T}{q_T} = \frac{V_1+V_2+V_3}{q} = \frac{V_1}{q_1} + \frac{V_2}{q_2} + \frac{V_3 }{q_3} = \frac{1}{C_1} + \frac{1}{C_2} = \frac{1}{C_3}$$
+
+
+
+
+
+
+\end{document}

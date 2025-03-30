@@ -21,48 +21,44 @@
 
 
 \section{Introduction}
-\textbf{Basic Text List:}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/CicuitryTopicsList.png}
+    \caption{Circuitry Topics List}
+\end{figure}
+
+\subsection{Basic Intuition for Charge Dynamics}
+
 \begin{itemize}
-    \item \textbf{Generator}: Motors, anything that can create a potential Differences
-    \item \textbf{Resistors}: Convert electrical energy to heat
-    \item \textbf{Capacitors}: Store charge
+    \item \textbf{Batteries}: Batteries do NOT supply charges (electrons come from capacitors / wires). Batteries are charge pumps, providing a source of energy.
+    \item
 \end{itemize}
 
-\section{Important Notice about Batteries}
+\section{Capacitors}
+
+\subsection{Basic Capacitor Behavior / Intuition}
 
 \begin{itemize}
-    \item Batteries do NOT supply charges (electrons come from capacitors / wires).
-    \item Battery = \emph{charge pump} = source of energy
+    \item Capacitors have the ability to store charge over a potential difference
+    \item Capacitors are measured in $\text{F}$, or Farads. Unit Analysis: $ \frac{[C]}{[V]} = \frac{[J]}{[C]} = [F]$
 \end{itemize}
 
-\section{Capacitors (plate capacitors)}
+\subsection{Finding the Capacitance of Capacitor Shapes}
 
-Capacitors have the ability to store charge over a potential difference. Capacitance is calculated as follows:
+Basic capacitance is calculated by this formula:
 
 $$C = \frac{\text{q}}{\text{V}}$$
 
-Where $q$ is the charge that the conductor has and the $V$ is the potential difference across the capacitor. Capacitance also comes with a new unit, the \textbf{Farad}:
+Where $q$ is the charge that the conductor has and the $V$ is the potential difference across the capacitor.
 
-$$ \frac{[C]}{[V]} = \frac{[J]}{[C]} = [F]$$
-
-\subsection{Calculating For Capacitance}
-
-Capacitance depends on the following:
-
-\begin{itemize}
-    \item Geometry of the plates
-    \item Medium between plates (usually we're going to use air, though, we can also use other mediums)
-\end{itemize}
-
-To solve, follow the following steps
+Given that capacitance depends on the geometry between the plates, along with the medium between plates, one can calculate the capacitance of a capacitor with an odd geometry by:
 
 \begin{enumerate}
     \item Find the electric field between plates
     \item Find the $\Delta V$ from the field
     \item Apply that to the capacitance equation $C = \frac{q}{V}$
 \end{enumerate}
-
-\subsection{Calculating the Capacitance between Parallel Plates}
 
 \subsubsection{Finding the Electrical Field between two plates}
 
@@ -103,11 +99,12 @@ $$\Delta v = - \int \vec{E} \delta \vec{s} = - \int_{b}^{a} \frac{q}{2 \pi r L \
 
 $$ C = \frac{q}{v} = \boxed{\frac{2 \pi L \epsilon_0}{\ln \frac{b}{a}}}$$
 
-\section{Capacitors in Parallel vs Circuits in Series}
+\subsection{Series and Parallel Capacitors}
+
 
 Always remember the formula $C = \frac{Q}{V}$
 
-\subsection{Capacitors in Parallel}
+\subsubsection{Capacitors in Parallel}
 
 If a capacitor is in parallel, you can think it as adding up metal plates. Voltages are the same, and charge is proportionate to the capacitance at the capacitor. For an example 3 capacitors in series, the,
 
@@ -119,7 +116,7 @@ $$C_{\text{eq}} = \Sigma C$$
 
 \textbf{Note}: This is opposite than resistors.
 
-\subsection{Capacitors in Series}
+\subsubsection{Capacitors in Series}
 
 If a capacitor is in series, you can think about it as adding up the air gaps. In the end, it's one big capacitor. Thus charge is equal.
 
@@ -128,40 +125,83 @@ $$V_T = V_1 + V_2 + V_3$$
 $$\frac{1}{C_{\text{eq}}} = \frac{V_T}{q_T} = \frac{V_1+V_2+V_3}{q} = \frac{V_1}{q_1} + \frac{V_2}{q_2} + \frac{V_3 }{q_3} = \frac{1}{C_1} + \frac{1}{C_2} = \frac{1}{C_3}$$
 
 
-\section{Capacitance and Energy}
 
-One would think that since $q = CV_0$, and since $U = qV$, capacitance is $CV^2$. However, this is not true, since the voltage of a graph changes over time. 
+\subsection{Dielectrics}
+
+Dielectrics
+
+\subsection{Charging capacitors from other capacitors}
+
+\subsection{Power/Energy of a capacitors}
+
+One would think that since $q = CV_0$, and since $U = qV$, capacitance is $CV^2$. However, this is not true, since the voltage of a graph changes over time.
 
 $$\Delta U = \int d q \delta U = \int V delta q  = \int \frac{q}{c} \delta q $$
 $$ = \frac{q^2}{2c}$$
 
-\section{Energy Density}
+\section{Resistors}
+
+\subsection{Basic Resistor Behavior / Intuition}
+
+\subsection{Series vs Parallel Resistors}
+
+\subsection{Resistivity, Current Density}
+
+
+\subsubsection{Energy Density}
 
 Energy density is literally just the energy divided by the volume.
 
 $$u = \frac{U}{\text{vol}} = \frac{\epsilon_0 V^2}{2 d^2 } = \frac{1}{2} \epsilon E^2$$
 
-\section{Current}
+\subsubsection{Current Density}
 
-Current is the measure of the flow of positive charges through a wire (which is basically the inverse of electrons, thanks Ben Franklin). 
+J = $\frac{\delta i}{\delta A} = \int J \delta A$
+
+The speed of electrons in a wire is VERY SLOW, the quantity of electrons give it its power.
+
+\subsubsection{Current Density}
+
+\section{Resistance}
+
+You can calculate for the resistance of a resistor, given the formula $J = I/A$
+
+$$\rho = \frac{E}{J} = \frac{V / L}{i / A} = \frac{V}{i} \frac{A}{L} = R \frac{A}{L}$$
+$$R = \frac{\rho L }{A}$$
+
+\subsubsection{Electrical Power}
+
+$$P = \frac{\delta w}{\delta t} = \delta q V = i \delta t V $$
+$$P = iV$$
+
+\subsection{Ohm's Law}
+
+Ohm's law relates voltage to current.
+
+$I = \frac{V}{R}$
+
+\section{Current Dynamics}
+
+\subsubsection{Current}
+
+Current is the measure of the flow of positive charges through a wire (which is basically the inverse of electrons, thanks Ben Franklin).
 
 Current = i = $\frac{\delta q}{\delta t}$
 
 Units: [i] = $\frac{C}{S}$ = A (Amperes). \\
-Current going inside must be the same going outside, e.g. it is conserved..
+Current going inside must be the same going outside, e.g. it is conserved.
 
-\section{Current Density}
+\subsection{Intuition about Currents}
 
-J = $\frac{\delta i}{\delta A} = \int J \delta A$ 
+\subsection{RC Currents (Resistor + Capacitor)}
 
-The speed of electrons in a wire is VERY SLOW, the quantity of electrons give it its power.
+\subsection{Kirchoff's Rules}
 
-\section{Ohm's Law}
-
-Ohm's law relates voltage to current.
+\subsection{Changes in Circuit Values over Time}
 
 
-\section{Resistance}
+
+
 
 
 \end{document}

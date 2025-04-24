@@ -33,4 +33,74 @@ The test will have the following topics:
     \item Right Hand Rule (RHR)
 \end{itemize}
 
+\section{Forces} 
+
+\subsection{Lorenz Force}
+
+Forces from a moving particles (Lorenz Forces). Bend $\vec{v}$ into $\vec{b}$ to get the direction for $\vec{F}_B$ 
+
+\[\vec{F}_B = q(\vec{v} \times \vec{b})\]
+
+Objects moving in a circle. 
+
+\begin{itemize}
+    \item $\vec{F}_B = \vec{F}_C$
+    \item $r = \frac{mv}{qb}$
+    \item Pitch: Distance parallel to the magnetic field
+    \item Period of Orbit $v = \frac{2\pi r}{T}$; $T = \frac{2 \pi r}{v}$
+\end{itemize}
+
+
+\subsection{Currents and Torques of Wires}
+
+$\vec{L}$ is in direction of the current. Field wraps around a wire (RHR it).
+
+$$F_b = i |\vec{L} \times \vec{B} |$$
+
+Torque in a wire loop (probably derivable), with a and b being with width and height respectively: 
+
+$$\tau = ib (\text{area of loop})$$
+
+\section{Law of BS}
+
+$$\delta \vec{B} = \frac{\mu_0}{4\pi} \frac{i \delta \vec{L} \times \hat{r}}{r^2}$$
+
+Where $\delta \vec{L}$ is the vectorized length of wire, $\hat{r}$ is the unit vector from $\delta \vec{L}$ top, and r is the distance from the point to the wire.
+
+Field of a wire on a point:
+
+$$\vec{B} = \frac{\mu_0 i}{2 \pi R}$$
+
+Field of a enclosed wire loop:
+
+$$\vec{B} = \frac{\mu_0}{2R}$$
+
+\section{Ampere's Law}
+
+$$\oint \vec{B} \cdot \delta \vec{s} = \mu_0 i_{\text{enc}}$$
+
+Amperian Loop: draw a path around an object that mimics the symmetry of the emitter. 
+
+\section{Magnetic Flux}
+
+\textbf{NOTE}: Be able to find flux from relate to velocity, change in area, work, and other forces
+
+\begin{enumerate}
+    \item (Law of Flux) The voltage induced in a coil is equal to negative of the rate of change of magnetic flux through a coil ($\epsilon = - N\frac{\delta \Phi}{\delta t} = -N\frac{\int B \delta A}{t}$)
+    \item (Lenz's Law) An induced current has a direction such that the magnetic field due to the current opposes the charge in the magnetic  flux that induces the current. 
+\end{enumerate}
+
+\section{Forces on Parallel Currents}
+
+\subsection{On Two Wires} 
+
+$$\left|\frac{F}{L} \right| = \frac{\mu_0 i_1 i_2}{2\pi d}$$
+
+\subsection{Wrapped Wires}
+
+\begin{enumerate}
+    \item Solenoid:$B = \mu_0 i n$, where the direction is through the solenoid
+    \item Toroids:$B = \frac{\mu_0 n i}{2\pi r}$
+\end{enumerate}
+
 \end{document}

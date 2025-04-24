@@ -12,6 +12,7 @@
 *.cb2
 .*.lb
 
+.vscode
 .DS_Store
 
 ## Intermediate documents:

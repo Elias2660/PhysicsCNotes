@@ -33,15 +33,15 @@ The test will have the following topics:
     \item Right Hand Rule (RHR)
 \end{itemize}
 
-\section{Forces} 
+\section{Forces}
 
 \subsection{Lorenz Force}
 
-Forces from a moving particles (Lorenz Forces). Bend $\vec{v}$ into $\vec{b}$ to get the direction for $\vec{F}_B$ 
+Forces from a moving particles (Lorenz Forces). Bend $\vec{v}$ into $\vec{b}$ to get the direction for $\vec{F}_B$
 
 \[\vec{F}_B = q(\vec{v} \times \vec{b})\]
 
-Objects moving in a circle. 
+Objects moving in a circle.
 
 \begin{itemize}
     \item $\vec{F}_B = \vec{F}_C$
@@ -57,7 +57,7 @@ $\vec{L}$ is in direction of the current. Field wraps around a wire (RHR it).
 
 $$F_b = i |\vec{L} \times \vec{B} |$$
 
-Torque in a wire loop (probably derivable), with a and b being with width and height respectively: 
+Torque in a wire loop (probably derivable), with a and b being with width and height respectively:
 
 $$\tau = ib (\text{area of loop})$$
 
@@ -79,7 +79,7 @@ $$\vec{B} = \frac{\mu_0}{2R}$$
 
 $$\oint \vec{B} \cdot \delta \vec{s} = \mu_0 i_{\text{enc}}$$
 
-Amperian Loop: draw a path around an object that mimics the symmetry of the emitter. 
+Amperian Loop: draw a path around an object that mimics the symmetry of the emitter.
 
 \section{Magnetic Flux}
 
@@ -87,12 +87,12 @@ Amperian Loop: draw a path around an object that mimics the symmetry of the emit
 
 \begin{enumerate}
     \item (Law of Flux) The voltage induced in a coil is equal to negative of the rate of change of magnetic flux through a coil ($\epsilon = - N\frac{\delta \Phi}{\delta t} = -N\frac{\int B \delta A}{t}$)
-    \item (Lenz's Law) An induced current has a direction such that the magnetic field due to the current opposes the charge in the magnetic  flux that induces the current. 
+    \item (Lenz's Law) An induced current has a direction such that the magnetic field due to the current opposes the charge in the magnetic  flux that induces the current.
 \end{enumerate}
 
 \section{Forces on Parallel Currents}
 
-\subsection{On Two Wires} 
+\subsection{On Two Wires}
 
 $$\left|\frac{F}{L} \right| = \frac{\mu_0 i_1 i_2}{2\pi d}$$
 
@@ -102,5 +102,46 @@ $$\left|\frac{F}{L} \right| = \frac{\mu_0 i_1 i_2}{2\pi d}$$
     \item Solenoid:$B = \mu_0 i n$, where the direction is through the solenoid
     \item Toroids:$B = \frac{\mu_0 n i}{2\pi r}$
 \end{enumerate}
+
+\section{Induction}
+
+Change of current or change of EMF induces a current in a wire. \textbf{Self Inductance} is a type of circuit that creates a field and then tries to change it when the current changes.
+
+\begin{enumerate}
+    \item Sort of like a reverse capacitor
+    \item Measured in Henries
+\end{enumerate}
+
+Inductance of an Inductor
+
+\[
+    L = \frac{\Phi}{L} = \frac{N \int B \cdot \delta A}{L} = \frac{N \int \mu_0 N / L \delta A}{i} = \frac{\mu_0 N^2 A}{L}
+\]
+
+Induced Voltage of an Inductor:
+
+\[
+    \epsilon = -\frac{\delta \Phi}{\delta t} = - L \frac{\delta i}{\delta t}
+\]
+
+\section{RL Currents}
+
+Current Induced in an Inductor over Time
+
+\[
+    \begin{aligned}
+        i(t)          & = \frac{\epsilon_0}{R} \Bigl(1 - e^{-\frac{R}{L}t}\Bigr)             \\
+        \epsilon_L(t) & = -L \frac{\mathrm{d}i}{\mathrm{d}t} = -\epsilon_0 e^{-\frac{R}{L}t} \\
+        V_R(t)        & = i(t)R = \epsilon_0 \Bigl(1 - e^{-\frac{R}{L}t}\Bigr)
+    \end{aligned}
+\]
+
+Energy Stored in a Capacitor
+
+\[U= \frac{1}{2} Li^2\]
+
+Energy Density of a Capacitor
+
+\[u = \frac{B^2}{2\mu_0}\]
 
 \end{document}
